@@ -1,0 +1,10 @@
+{ "nameservers": [
+    { "name": "ns1.example.com"
+    , "ipv4": "192.0.0.1"
+    }
+  , { "name": "ns2.example.com"
+    , "ipv4": "192.0.0.2"
+    }
+  ]
+, "primaryNameserver": "ns1.example.com"
+}

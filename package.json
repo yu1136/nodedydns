@@ -1,0 +1,32 @@
+{
+  "name": "ddns",
+  "version": "0.4.0",
+  "description": "Dynamic DNS Server",
+  "main": "index.js",
+  "bin": "./bin/node-dyndns",
+  "scripts": {
+    "test": "echo ERROR no tests; exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.7",
+    "body-parser": "^1.11.0",
+    "check-ip-address": "^1.1.1",
+    "dom-storage": "^2.0.1",
+    "ejs": "*",
+    "express": "*",
+    "express-jwt": "^3.0.1",
+    "jsonwebtoken": "^5.0.2",
+    "native-dns": "*",
+    "ursa": "^0.8.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daplie/node-ddns.git"
+  },
+  "author": "AJ ONeal <awesome@coolaj86.com> (https://coolaj86.com)",
+  "contributors": [
+    "Naoki Takimura"
+  ],
+  "license": "Apache2"
+}

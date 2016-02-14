@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="/javascripts/jquery-2.1.0.min.js"></script>
+    
+    <!-- bootstrap -->    
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body class="container">
+  
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">node-dyndns</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/domain">Domain</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+  
+    <h2>Domain</h2>
+    <table class="table">
+      <tr>
+        <th>Type</th>
+        <th>TTL</th>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+      <% for (index in domains) { %>
+      <tr>
+          <td>
+            <%= domains[index].type %>
+          </td>
+          <td>
+            <%= domains[index].ttl %>
+          </td>
+          <td>
+            <a href="http://<%= domains[index].name %>/"><%= domains[index].name %></a>
+          </td>
+          <td>
+            <ul>
+            <% for (i in domains[index].values) { %>
+              <li><%= domains[index].values[i] %></li>
+            <% } %>
+            </ul>
+          </td>
+      </tr>
+      <% } %>
+    </table>
+
+  </body>
+
+</html>
